@@ -10,8 +10,9 @@
     = f.label :title
     = f.text_field :title
 
+    %br/
     = image_tag( @article.thumbnail_url ) if @article.thumbnail?
     = f.file_field :thumbnail
-    = f.hidden :thumbnail_cache
+    = f.hidden_field :thumbnail_cache
   .actions
     = f.submit 'Save'

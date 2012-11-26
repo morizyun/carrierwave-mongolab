@@ -1,5 +1,5 @@
 # encoding: utf-8
-
+require "digest/md5"
 class ThumbnailUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:

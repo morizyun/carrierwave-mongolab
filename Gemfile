@@ -11,6 +11,9 @@ end
 
 gem 'jquery-rails'
 
+gem 'foreman'
+gem 'thin'
+
 # Haml
 gem 'haml-rails'
 
