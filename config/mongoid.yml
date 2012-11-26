@@ -1,0 +1,10 @@
+development:
+  host: localhost
+  database: carrierwave_mongolab_development
+
+test:
+  host: localhost
+  database: carrierwave_mongolab_test
+
+production:
+  uri: <%= ENV['MONGOLAB_URI'] %>

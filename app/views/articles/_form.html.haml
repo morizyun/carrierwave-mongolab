@@ -1,0 +1,17 @@
+= form_for @article do |f|
+  - if @article.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@article.errors.count, "error")} prohibited this article from being saved:"
+      %ul
+        - @article.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+
+    = image_tag( @article.thumbnail_url ) if @article.thumbnail?
+    = f.file_field :thumbnail
+    = f.hidden :thumbnail_cache
+  .actions
+    = f.submit 'Save'
